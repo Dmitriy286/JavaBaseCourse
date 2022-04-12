@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public abstract class Figure {
     ArrayList<Point> pointsList;
+    private double perimeter;
 
     public Figure (ArrayList<Point> pointsList) {
         this.pointsList = pointsList;
+
     }
 
     public String toString() {
-    return "Привет, я " + getClass().getName() + " с точками: " + this.pointsList;
+    return "Привет, я " + this.getClass().getSimpleName() + " с точками: " + this.pointsList;
     }
 
     public Point getNextPoint(int index) {

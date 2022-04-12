@@ -1,5 +1,7 @@
 package Figures;
 
+import Figures.FabricMethod.FigureCreator;
+import Figures.FabricMethod.ICreateFigure;
 import com.company.Human;
 
 import java.util.ArrayList;
@@ -13,7 +15,7 @@ public class Main {
             Point p3 = new Point(4, 4);
             Point p4 = new axisPoint(0,5);
 
-            System.out.println(p1.toString());
+            System.out.println(p1.toString()); //нет необходимости вызывать метод toString
             System.out.println(p2.toString());
             System.out.println(p3.toString());
 
@@ -80,11 +82,9 @@ public class Main {
             System.out.println("Новый вариант toString");
             System.out.println(pentangle);
 
-            Human humanMike = new Human("Mike", 25, 82);
-            humanMike.greetings();
-
-            System.out.println(humanMike.getClass());
-            System.out.println(humanMike);
+            FigureCreator creator = new FigureCreator();
+            Figure newFigure = creator.create(arrayList2); //fixme ??????????????????????????????
+            System.out.println(newFigure);
 
 
 //            Triangle triangle = new Triangle(p1, p2, p3);
