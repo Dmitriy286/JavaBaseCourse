@@ -15,13 +15,25 @@ public class AbstractFactory implements IFigureFactory {
         this.theme = theme;
     }
 
-    public Figure create(ArrayList<Point> points) {
-        ICreateFigure factory;
+    public Figure createRectangle(ArrayList<Point> points) {
+        IFigureFactory factory = null;
         if (theme == "red") {
             factory = new RedFiguresFactory();
         } else if (theme == "blue") {
             factory = new BlueFiguresFactory();
         }
-        return factory.create(ArrayList<Point> points);
+        return factory.createRectangle(points);
     }
+
+    public Figure createPolygon(ArrayList<Point> points) {
+        IFigureFactory factory = null;
+        if (theme == "red") {
+            factory = new RedFiguresFactory();
+        } else if (theme == "blue") {
+            factory = new BlueFiguresFactory();
+        }
+        return factory.createPolygon(points);
+    }
+
+
 }

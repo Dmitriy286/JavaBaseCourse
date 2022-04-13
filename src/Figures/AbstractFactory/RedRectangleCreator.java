@@ -8,14 +8,10 @@ import java.util.ArrayList;
 
 public class RedRectangleCreator implements IRectangle {
     @Override
-    public Figure createRedRectangle(ArrayList<Point> points) {
+    public Figure createRectangle(ArrayList<Point> points) {
         Figure rectangle = new Rectangle(points);
+        rectangle.setColor("red");
         return rectangle;
-    }
-
-    public void paint() {
-        ArrayList<Point> points = null;
-        createRedRectangle(points).setColor("red"); //todo????????
     }
 
 }

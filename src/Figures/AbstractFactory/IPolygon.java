@@ -9,6 +9,5 @@ import java.util.ArrayList;
 
 public interface IPolygon {
 
-    public Figure createRedPolygon(ArrayList<Point> points);
-    public Figure createBluePolygon(ArrayList<Point> points);
+    public Figure createPolygon(ArrayList<Point> points);
 }
