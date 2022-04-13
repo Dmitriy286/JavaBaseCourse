@@ -1,17 +1,24 @@
 package Figures.AbstractFactory;
 
+import Figures.Figure;
+import Figures.Point;
 import Figures.Polygon;
 import Figures.Rectangle;
+
+import java.util.ArrayList;
 
 public class RedFiguresFactory implements IFigureFactory{
 
 
-    public Rectangle createRectangle () {
-        return new RedRectangleCreator();
+    public Figure createRectangle (ArrayList<Point> points) {
+
+        var creator =  new RedRectangleCreator();
+        return creator.createRectangle(points);
     }
 
-    public Polygon createPolygon() {
+    public Figure createPolygon(ArrayList<Point> points) {
 
-        return new RedPolygonCreator;
+        var creator =  new RedPolygonCreator();
+        return creator.createPolygon(points);
     }
 }

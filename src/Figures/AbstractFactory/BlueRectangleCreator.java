@@ -9,13 +9,10 @@ import java.util.ArrayList;
 
 public class BlueRectangleCreator implements IRectangle {
     @Override
-    public Figure createBlueRectangle(ArrayList<Point> points) {
+    public Figure createRectangle(ArrayList<Point> points) {
         Figure rectangle = new Rectangle(points);
+        rectangle.setColor("blue");
         return rectangle;
     }
 
-    public void paint() {
-        ArrayList<Point> points = null;
-        createBlueRectangle(points).setColor("blue"); //todo????????
-    }
 }
