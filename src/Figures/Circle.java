@@ -11,7 +11,6 @@ public class Circle extends Figure{
     }
 
     public double getRadius() {
-        //не нравится вот этот метод
         double x1 = pointsList.get(0).getX();
         double y1 = pointsList.get(0).getY();
         double x2 = pointsList.get(1).getX();
