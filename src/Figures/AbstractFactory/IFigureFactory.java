@@ -1,5 +1,6 @@
 package Figures.AbstractFactory;
 
+import Figures.Figure;
 import Figures.Point;
 import Figures.Polygon;
 import Figures.Rectangle;
@@ -8,8 +9,8 @@ import java.util.ArrayList;
 
 public interface IFigureFactory {
 
-    public Rectangle createRectangle(ArrayList<Point> points);
-    public Polygon createPolygon(ArrayList<Point> points);
+    public Figure createRectangle(ArrayList<Point> points);
+    public Figure createPolygon(ArrayList<Point> points);
 
 
 }

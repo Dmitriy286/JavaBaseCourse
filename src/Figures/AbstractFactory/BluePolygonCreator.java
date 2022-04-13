@@ -10,14 +10,10 @@ import java.util.ArrayList;
 public class BluePolygonCreator implements IPolygon {
 
     @Override
-    public Figure createBluePolygon(ArrayList<Point> points) {
+    public Figure createPolygon(ArrayList<Point> points) {
         Figure polygon = new Polygon(points);
+        polygon.setColor("blue");
         return polygon;
-    }
-
-    public void paint() {
-        ArrayList<Point> points = null;
-        createBluePolygon(points).setColor("blue"); //todo????????
     }
 
 }
