@@ -15,6 +15,9 @@ public class Circle extends Figure{
         double y1 = pointsList.get(0).getY();
         double x2 = pointsList.get(1).getX();
         double y2 = pointsList.get(1).getY();
+        int a=5;
+        int b = 7;
+        int c=a+b;
 
         double radius = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
         return radius;
